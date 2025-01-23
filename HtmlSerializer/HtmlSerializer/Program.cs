@@ -1,13 +1,6 @@
 ﻿using HtmlSerializer;
-using Microsoft.VisualBasic;
-using System;
-using System.Collections.Immutable;
-using System.ComponentModel.DataAnnotations;
-using System.Linq.Expressions;
 using System.Text.RegularExpressions;
 
-//async void SearchInHtml()
-{
     //load and clean
     Console.WriteLine("enter link of html");
     var url = Console.ReadLine();
@@ -31,10 +24,6 @@ using System.Text.RegularExpressions;
     //print 
     Console.WriteLine($"we found {listHtmlSuitable.Count}");
     listHtmlSuitable.ForEach(l => Console.WriteLine(l));
- }
-
-
-
 
 
 
@@ -160,8 +149,5 @@ using System.Text.RegularExpressions;
         }
         return root;
     }
-
-
-    //SearchInHtml();
 
 

@@ -78,7 +78,6 @@ namespace HtmlSerializer
             FindBySelectorRecursive(element, selector, result);
             return result;
         }
-
         private static void FindBySelectorRecursive(HtmlElement element, Selector selector, HashSet<HtmlElement> result)
         {
             if (selector == null) return;
@@ -103,62 +102,3 @@ namespace HtmlSerializer
         }
     }
 }
-
-
-
-
-    // public IEnumerable<HtmlElement> FindSelectorInHtml(Selector selector,HtmlElement htmlElement ,List<HtmlElement> res)
-    //{
-    //    if(selector==null)
-    //    {
-    //        return;
-    //    }
-    //    bool isTagName=false;
-    //    bool isId = false;
-    //    bool isClasses = true;
-
-    //    var descendant =  htmlElement.Descendants().ToList();
-    //    foreach(var d in descendant)
-    //    {
-    //        FindSelectorInHtml(selector,htmlElement,res);
-    //    }
-    //    if (selector.TagName == descendant.First().Name || selector.TagName == "")
-    //    {
-    //            isTagName = true;
-    //    }
-    //    if (selector.Id == descendant.First().Id || selector.Id == "")
-    //    {
-    //         isId = true;
-    //    }
-    //    foreach (var c in selector.Classes)
-    //    {
-    //         if (!descendant.First().Classes.Contains(c))
-    //         {
-    //               isClasses = false;
-    //         }
-    //    }
-    //    if(isTagName && isId &isClasses)//all good
-    //    {
-    //         foreach (var child in descendant.First().Children)
-    //         {
-    //                 FindSelectorInHtml(selector.Child, child, res);
-    //         }
-    //    }
-    //    else
-    //    {
-    //        foreach (var child in descendant)
-    //        {
-    //            FindSelectorInHtml(selector, child, res);
-    //        }
-    //    }
-    //}
-
-//div class
-//< div >
-//    < i >
-//        < p class=”class-name”></ p >
-//    </ i >
-//    < i >
-//        < p class=”class-name”></ p >
-//    </ i >
-//</ div >
